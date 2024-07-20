@@ -38,10 +38,10 @@ batch_size = 64
 num_classes = 101
 
 # Set up data loaders for train, val, and test with data augmentation
-train_dataset = datasets.ImageFolder(root='./Dataset Fv01/train', transform=transform)
+train_dataset = datasets.ImageFolder(root='./train', transform=transform)
 train_loader = torch.utils.data.DataLoader(train_dataset, batch_size=batch_size, shuffle=True)
 
-val_dataset = datasets.ImageFolder(root='./Dataset Fv01/val', transform=transform)
+val_dataset = datasets.ImageFolder(root='./val', transform=transform)
 val_loader = torch.utils.data.DataLoader(val_dataset, batch_size=batch_size, shuffle=False)
 
 # Move model to GPU
