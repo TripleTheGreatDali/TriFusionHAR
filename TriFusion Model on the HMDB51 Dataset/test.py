@@ -11,7 +11,7 @@ device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 # Define the directory paths
 save_dir = './saved_models'
 results_dir = './evaluation_results'
-test_dir = './Dataset Fv01/test'
+test_dir = './test'
 
 # Load the saved model
 model_filename = f'hybrid_model.pth'
