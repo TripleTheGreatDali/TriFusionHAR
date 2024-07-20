@@ -13,10 +13,15 @@ warnings.filterwarnings("ignore")
 # Set device - GPU if available, else CPU
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
-# Define the directory paths
-save_dir = './saved_models'
+
+save_dir = './'
+
 results_dir = './evaluation_results'
-test_dir = './test'
+
+if not os.path.exists(results_dir):
+    os.makedirs(results_dir)
+    
+test_dir = './test/test'
 
 # Load the saved model
 model_filename = f'TriFusion_ucf101_100_epoch.pth'
@@ -91,6 +96,7 @@ accuracy = correct_predictions / total_predictions
 accuracy_text_path = os.path.join(results_dir, 'test_accuracy.txt')
 with open(accuracy_text_path, 'w') as accuracy_file:
     accuracy_file.write(f'Overall Accuracy: {accuracy:.4f}')
+    print(f'Overall Accuracy: {accuracy:.4f}')
 
 # Calculate and display the average inference speed per frame in milliseconds
 average_frame_time = np.mean(frame_times)
