@@ -7,7 +7,7 @@ This repository contains the implementation of the TriFusion Hybrid Model for Hu
 Ahmed, M.F., He, G. & Wang, S. TriFusion hybrid model for human activity recognition. SIViP (2024). https://doi.org/10.1007/s11760-024-03487-5
 
 ## Citation
-If you use this code in your research, please cite the following paper:
+If you found this work helpful in your research, please consider citing:
 
 ```bibtex
 @article{Ahmed2024,
